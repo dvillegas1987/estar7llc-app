@@ -1,0 +1,58 @@
+.share-icon {
+    color: $brand-color;
+    .svg {
+        width: 16px;
+        height: 16px;
+        display: block;
+        fill: currentColor;
+    }
+}
+
+.social-sharing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    li {
+        font-size: 0.8rem;
+        display: block;
+        position: relative;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        flex: 0 0 50%;
+        max-width: 50%;
+        a {
+            display: block;
+            .icn {
+                height: inherit;
+                width: inherit;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                svg {
+                    fill: #fff;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+        &.social-facebook {
+            background: #3b5998;
+        }
+        &.social-twitter {
+            background: #6cdfea;
+        }
+        &.social-pintrest {
+            background: #c8232c;
+        }
+        &.social-email {
+            background: #9b9a9a;
+        }
+    }
+}

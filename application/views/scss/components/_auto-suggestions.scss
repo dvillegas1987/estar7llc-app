@@ -1,0 +1,57 @@
+.yk-ac-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: $radius4;
+    background: #fff;
+    -webkit-box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.20);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    overflow: hidden;
+}
+
+.yk-ac-terms {
+    background: $bg-gray;
+}
+
+.yk-list li a {
+    padding: 0.8rem 1rem;
+    display: block;
+    color: var(--body-color);
+}
+
+.yk-list li a:hover,
+.yk-list li.yk-active a {
+    background: #fff;
+}
+
+.yk-list li a em {
+    font-weight: 600;
+}
+
+.yk-ac-content {
+    padding: 1.5rem 2rem;
+}
+
+.yk-title {
+    font-size: 1em;
+    margin: 0 0 1rem 0;
+    color: var(--first-color);
+    font-weight: 400;
+}
+
+.yk-ac-facets li {
+    padding: 0;
+}
+
+.yk-ac-results .products__title {
+    min-height: inherit;
+}

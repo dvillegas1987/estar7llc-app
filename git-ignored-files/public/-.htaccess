@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymlinks
+RewriteEngine on
+#RewriteBase /
+
+RewriteRule ^(?i)admin$ admin.php [PT,L]
+RewriteRule ^(?i)admin/(.*)$ admin.php?url=$1 [PT,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?url=$1 [PT,L,QSA]
+
+</IfModule>
+
+#These three lines are added to verify domain for universal linking
+<Files "apple-app-site-association">
+ForceType 'application/json'
+</Files>

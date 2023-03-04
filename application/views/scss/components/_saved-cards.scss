@@ -1,0 +1,87 @@
+.saved-cards {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    >li {
+        border-radius: $radius4;
+        border: $border;
+        background: #fff;
+        padding: 1rem;
+        position: relative;
+        &.selected,
+        &:hover {
+            background: #005eff url(images/visa-bg.jpg) no-repeat center;
+            border-color: #005eff;
+            box-shadow: 0 2px 4px 0 #cfd7df;
+            .list-actions {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+            .cards-detail {
+                h6,
+                p {
+                    color: #fff;
+                }
+            }
+        }
+        .radio {
+            input {
+                width: 20px !important;
+                height: 20px !important;
+                max-width: 20px;
+                flex: 0 0 20px;
+                border-color: #fff;
+                background: none;
+                vertical-align: inherit;
+            }
+        }
+        .cards-detail {
+            h6 {
+                color: $txt-gray;
+                font-size: 10px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 2px;
+            }
+            p {
+                color: $body-color;
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+        }
+        .list-actions {
+            position: absolute;
+            top: 19px;
+            #{$end-direction}: 1.5rem;
+            opacity: 0;
+            -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+            -webkit-transition: all .1s ease-in-out;
+            transition: all .1s ease-in-out;
+            transition-property: -webkit-transform, transform, opacity;
+            li {
+                margin: 0;
+                display: flex;
+                a {
+                    color: #fff;
+                    .svg {
+                        width: 20px;
+                        height: 20px;
+                        opacity: 1;
+                        vertical-align: inherit;
+                    }
+                    &:hover {
+                        .svg {
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        label {
+            display: block;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+.avtar {
+    height: 60px;
+    position: relative;
+    width: 60px;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: $border;
+    position: relative;
+
+    .avtar--rounded {
+        border-radius: 50% !important;
+
+        img {
+            border-radius: 100% !important;
+        }
+
+    }
+
+    &.avtar--large {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+
+.avtar img {
+    position: absolute;
+    #{$start-direction}: 0;
+    #{$end-direction}: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+
+
+.avtar--info {
+    padding-top: 5px;
+}
+
+.avtar--info .avtar {
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+.avtar--info h5 {
+    padding: 5px 0 0;
+}
+
+.avtar--rounded {
+    border-radius: 100% !important;
+}
+
+.avtar--rounded img {
+    border-radius: 100% !important;
+}
+
+.profile-avatar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /*justify-content: center;*/
+    height: 100%;
+    padding: 1rem;
+    
+    border-#{$end-direction}: $border;
+
+
+    @include media-breakpoint-down(md) {
+        & {
+            border: none;
+
+        }
+    }
+}
+
+.profile-avatar .profile__dp {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50px;
+    flex: 0 0 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.33);
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.33);
+    margin: 1rem auto;
+}
+
+.profile-avatar .profile__bio {
+
+    text-align: center;
+}
+
+.profile-avatar .title {
+    margin: 0;
+    font-size: 0.875em;
+    color: $body-color;
+}
+
+.profile-avatar .dated {
+    display: block;
+    font-size: 0.875rem;
+    opacity: 0.6;
+}

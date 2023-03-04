@@ -1,0 +1,86 @@
+.custom-tagify {
+    background-color: #fff;
+    border: 1px solid $border-color;
+    height: auto;
+    padding: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.9em;
+    font-weight: normal;
+    border-radius: $radius4;
+    input {
+        &[type="text"] {
+            border: none;
+        }
+    }
+}
+
+.list-tags {
+    display: flex;
+    flex: auto;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    li {
+        display: inline-block;
+        margin-#{$end-direction}: 5px;
+        span {
+            background-color: $gray-light;
+            border: $border;
+            padding: 5px;
+            border-radius: $radius3;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            font-size: 0.7rem;
+            line-height: 1.3;
+            margin: 5px 0;
+        }
+        &:hover {
+            span {
+                border-color: darken($border-color, 10%);
+            }
+        }
+        &.hover {
+            span {
+                border-color: #dc3545;
+                i {
+                    background-color: #dc3545;
+                    color: #fff;
+                }
+            }
+        }
+        i {
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            font-size: 0.6rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-left: 8px;
+            border-radius: 50%;
+            &:hover {
+                color: #fff;
+                background-color: $body-color;
+            }
+        }
+    }
+}
+
+.tagify {
+    font-size: 0.8rem;
+    min-height: 35px;
+    .tagify__tag {
+        margin: 5px;
+    }
+}
+
+.list-tag-wrapper {
+    max-height: 133px;
+    overflow-x: auto;
+}

@@ -1,0 +1,52 @@
+
+
+.message {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+.message h6 {
+    font-weight: normal;
+    padding: 0 0 20px 0;
+}
+
+.message .fa {
+    font-size: 6em;
+    color: #24b26b;
+    margin: 0 0 10px 0;
+    -webkit-animation: fall-in 1s;
+    animation: fall-in 1s;
+
+}
+
+
+@-webkit-keyframes fall-in {
+    0% {
+        -webkit-transform: scale(3, 3);
+        transform: scale(3, 3);
+        opacity: 0;
+    }
+
+    50% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+
+    60% {
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+}
+
+.message a {
+    text-decoration: underline;
+
+}

@@ -1,0 +1,24 @@
+/*Bg*/
+
+.bg--primary-color,
+.bg-brand {
+    background: $brand-color;
+    color: $brand-color-inverse;
+}
+
+.bg-second {
+    background: $secondary-color;
+    color: $secondary-color-inverse;
+}
+
+.bg-white {
+    background: $bg-white;
+}
+
+.bg-gray {
+    background: $bg-gray;
+}
+
+.bg-gray-dark {
+    background: $bg-gray;
+}

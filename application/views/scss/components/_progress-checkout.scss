@@ -1,0 +1,117 @@
+// Colours -----------------------------------------
+$grey: #1dc9b7;
+$grey2: #dfe3e4;
+$blue: #1dc9b7;
+$green: #1dc9b7;
+$white: #fff;
+// Progress Bar ------------------------------------
+.checkout-progress {
+    width: 100%;
+    max-width: 650px;
+    margin: 1rem 0;
+    position: relative;
+    display: flex;
+    // Background Track
+    .progress-track {
+        position: absolute;
+        top: 7px;
+        width: 67%;
+        height: 2px;
+        background-color: $grey2;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        @include media-breakpoint-down(sm) {
+            & {
+                width: 100%;
+            }
+        }
+    }
+    // Each Step on the Progress Bar
+    .progress-step {
+        position: relative;
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+        // Hide the final step's progress bar
+        &:last-child:after {
+            display: none;
+        }
+        // Step's circle in default state
+        &:before {
+            content: "";
+            display: flex;
+            margin: 0 auto;
+            margin-bottom: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background-color: $white;
+            border: 2px solid $grey2;
+            border-radius: 100%;
+            color: $white;
+            background-image: url(../media/retina/tick.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 0.5rem;
+        }
+        // Step's progress bar in default state
+        &:after {
+            content: "";
+            position: absolute;
+            top: 7px;
+            #{$start-direction}: 50%;
+            width: 0%;
+            transition: width 1s ease-in;
+            height: 2px;
+            background: $grey2;
+            z-index: -1;
+        }
+        // Step's active state
+        &.is-active {
+            color: $blue;
+            &:before {
+                border: 2px solid $grey;
+                animation: pulsex 2s infinite;
+            }
+        }
+        // Step's complete state
+        &.is-complete {
+            color: $green;
+            // Step's circle in complete state
+            &:before {
+                font-size: 10px;
+                color: $white;
+                background-color: $green;
+                border: 2px solid transparent;
+            }
+            // Step's progress bar in complete state
+            &:after {
+                background: $blue;
+                animation: nextStep 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+@keyframes pulsex {
+    0% {
+        box-shadow: 0 0 0 0 rgba(29, 201, 183, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(29, 201, 183, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(29, 201, 183, 0);
+    }
+}
+
+@keyframes nextStep {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}

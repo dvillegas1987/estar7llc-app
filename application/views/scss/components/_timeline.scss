@@ -1,0 +1,122 @@
+    .timeline-orders {
+        margin: 2rem 0;
+    }
+    
+    .timeline-comments {
+        display: flex;
+        .timeline-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: $brand-color;
+            color: $brand-color-inverse;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-#{$end-direction}: 1rem;
+            overflow: hidden;
+        }
+        .timeline-comments-box {
+            flex: 1;
+            .input-group{
+                .form-control{
+                    @include media-breakpoint-down(sm) {
+                        flex: 1;
+                        margin-bottom: .875rem;
+                        max-width: 100%
+                    }                    
+                }
+                .input-group-append{
+                    > .btn{
+                        @include media-breakpoint-down(sm) {
+                          border-radius: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* Timeline */
+    
+    .timeline {
+        border-left: 2px solid $brand-color;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+        color: rgba(0, 0, 0, 0.8);
+        margin: 30px auto;
+        margin-#{$start-direction}: 153px;
+        position: relative;
+        line-height: 1.4em;
+        font-size: 0.8rem;
+        padding: 0 50px;
+        list-style: none;
+        @include media-breakpoint-down(sm) {
+            margin-#{$start-direction}: 0px;
+            padding: 0 20px;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+        .dropdown-toggle {
+            font-weight: 400;
+            @include media-breakpoint-down(sm) {
+                white-space: normal;
+            }
+        }
+        .event {
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+            color: $txt-gray;
+            &:last-of-type {
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border: none;
+            }
+            &:before,
+            &:after {
+                position: absolute;
+                display: block;
+                top: 0;
+            }
+            &:before {
+                #{$start-direction}: -200px;
+                color: $txt-gray;
+                content: attr(data-date);
+                text-align: #{$end-direction};
+                font-size: 0.75rem;
+                min-width: 120px;
+                @include media-breakpoint-down(sm) {
+                    #{$start-direction}: 0px;
+                    position: relative;
+                    display: block;
+                    text-align: #{$start-direction};
+                }
+            }
+            &:after {
+                box-shadow: 0 0 0 2px $brand-color;
+                #{$start-direction}: -57px;
+                @include media-breakpoint-down(sm) {
+                    #{$start-direction}: -27px;
+                }
+                background: $bg-white;
+                border-radius: 50%;
+                height: 11px;
+                width: 11px;
+                content: "";
+                top: 2px;
+            }
+        }
+        .timeline_status {
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: block;
+            color: $body-color;
+            margin-bottom: 0.5rem;
+            .svg {
+                fill: currentColor;
+                margin-#{$end-direction}: 5px;
+            }
+        }
+    }

@@ -1,0 +1,192 @@
+.top-categories-wrapper {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    @include media-breakpoint-down(sm) {
+        & {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .top-categories {
+        overflow: hidden;
+        background: $bg-white;
+        border-radius: $radius4;
+        height: 100%;
+        color: $body-color;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+        a {
+            color: inherit;
+        }
+        .cat-img {
+            display: block;
+            margin: 0 0 1rem;
+            padding: 0 0 25%;
+            position: relative;
+            width: 100%;
+            img {
+                max-width: 100%;
+                bottom: 0;
+                #{$start-direction}: 0;
+                margin: auto;
+                position: absolute;
+                #{$end-direction}: 0;
+                top: 0;
+                -webkit-transition: all 0.5s linear;
+                transition: all 0.5s linear;
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+                -webkit-filter: blur(0px);
+                -webkit-animation: fadein linear 1.5s;
+            }
+        }
+        .cat-tittle {
+            color: #000;
+            font-weight: 600;
+            font-size: 1em;
+            padding: 0 1.5rem;
+        }
+        .cat-list {
+            padding: 0 1.5rem;
+            li {
+                display: block;
+                margin: 10px 0;
+                color: #515050;
+                font-size: 0.9em;
+            }
+        }
+        a {
+            &:hover {
+                color: $brand-color;
+            }
+        }
+    }
+}
+
+.page-category {
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    background: $gray-light;
+}
+
+.page-category__content {
+    padding: 15px;
+    border: 1px solid #ddd;
+    color: #333;
+    border-top: none;
+    background: #fff;
+    p {
+        font-size: 0.9em;
+    }
+}
+
+.cg-nav-wrapper {
+    margin-bottom: 2rem;
+    ul {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        color: $body-color;
+        @include media-breakpoint-down(md) {
+            & {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+            }
+        }
+        li {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 5px;
+            @include media-breakpoint-down(md) {
+                & {
+                    flex: auto;
+                    max-width: inherit;
+                }
+            }
+            &:first-child {}
+            a {
+                background: #fff;
+                border: $border;
+                border-radius: $radius3;
+                color: inherit;
+                display: flex;
+                align-items: center;
+                padding: 0;
+                .cg-icon {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    display: flex;
+                    align-items: center;
+                    border-right: $border;
+                    overflow: hidden;
+                    padding: 0.5rem;
+                    margin-right: 0.5rem;
+                }
+                .caption {
+                    padding: 0.5rem;
+                    @include media-breakpoint-down(md) {
+                        & {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+            &.iss--active {
+                a {
+                    color: $primary-color;
+                    border-color: $primary-color;
+                    .cg-icon {
+                        border-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cg-main {
+    color: $body-color;
+    a {
+        color: inherit;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        @include media-breakpoint-down(md) {
+            & {
+                flex-direction: column;
+            }
+        }
+        li {
+            flex: 0 0 25%;
+            max-width: 25%;
+            @include media-breakpoint-down(md) {
+                & {
+                    flex: auto;
+                    max-width: none;
+                }
+            }
+            a {
+                padding: 0.5rem 0;
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: $border;
+        display: block;
+        &:last-child {
+            margin: 0;
+            border-bottom: none;
+        }
+    }
+    .big-title {
+        font-size: 0.89rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}

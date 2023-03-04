@@ -1,0 +1,109 @@
+.outdated {
+    display: none;
+}
+
+@media all and (-ms-high-contrast:none) {
+    /* IE10 */
+    *::-ms-backdrop,
+    .outdated {
+        display: block;
+        color: red;
+    }
+    /* IE11 */
+}
+
+.outdated-inner {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    #{$start-direction}: 0;
+    #{$end-direction}: 0;
+    background: #00caff;
+    z-index: 100000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    * {
+        color: #fff;
+    }
+}
+
+.outdated-messages {
+    margin: 0 auto;
+    max-width: 900px;
+    .heading {
+        font-size: calc(112.5% + 1vw);
+        line-height: 1.3;
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
+    .para {
+        font-size: 14px;
+    }
+}
+
+.list-browser {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 2rem auto;
+    .icn {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 1rem auto;
+        display: block;
+        background: url(../images/browsers-bg.png) no-repeat;
+        background-size: auto 200px;
+    }
+}
+
+.list-browser a:hover .icn.chrome {
+    background-position: 0 -100px;
+}
+
+.list-browser .icn.firefox {
+    background-position: -100px 0;
+}
+
+.list-browser a:hover .icn.firefox {
+    background-position: -100px -100px;
+}
+
+.list-browser .icn.internetexplorer {
+    background-position: -200px 0;
+}
+
+.list-browser a:hover .icn.internetexplorer {
+    background-position: -200px -100px;
+}
+
+.list-browser .icn.safari {
+    background-position: -300px 0;
+}
+
+.list-browser a:hover .icn.safari {
+    background-position: -300px -99px;
+}

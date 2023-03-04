@@ -1,0 +1,133 @@
+.panel {
+    width: 100%;
+}
+
+.panel.panel--custom .panel__left {
+    float: left;
+    width: calc(100% - 180px);
+}
+
+.panel.panel--custom .panel__right {
+    width: 160px;
+    float: right;
+}
+
+.panel.panel--wide .panel__left {
+    clear: left;
+    float: left;
+    width: 220px;
+}
+
+.panel.panel--wide .panel__right {
+    float: right;
+    width: calc(100% - 220px);
+    padding: 0 0 0 25px;
+}
+
+.panel--centered {
+    /*max-width: 1100px;*/
+    margin: 0px auto 20px;
+}
+
+.panel--centered .box {
+    padding: 20px;
+}
+
+.panel--centered .box--tabled {
+    padding: 2.5rem 100px;
+    position: relative;
+}
+
+.box--tabled {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.box--tabled .box__cell {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 70px 0 0;
+    width: 55%;
+}
+
+.box--tabled .box__cell:first-child {
+    border-#{$end-direction}: $border;
+}
+
+.box--tabled .box__cell:last-child {
+    vertical-align: top;
+    width: 45%;
+    -webkit-padding-end: 0;
+    -moz-padding-end: 0;
+    padding-#{$end-direction}: 0;
+}
+
+.box--tabled .box__cell .listing--icons {
+    padding: 50px 0 50px 50px;
+    position: relative;
+    top: 20px;
+}
+
+.panel--cols {
+    padding: 20px 0;
+}
+
+.panel--cols .col--left {
+    -webkit-padding-end: 30px;
+    -moz-padding-end: 30px;
+    padding-#{$end-direction}: 30px;
+    clear: left;
+}
+
+.panel--cols .col--right {
+    float: right;
+    clear: right;
+}
+
+.panel__head {
+    padding: 0 0 10px 0;
+    width: 100%;
+    display: inline-block;
+}
+
+.panel__head h2 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.panel__head p {
+    display: inline-block;
+    clear: left;
+}
+
+.panel__head .btn {
+    vertical-align: top;
+}
+
+.panel__head .links--inline {
+    float: right;
+    width: auto;
+}
+
+.panel__head .panel__head_action {
+    float: right;
+}
+
+.panel__head .links--inline li {
+    padding: 0 0 0 20px;
+    position: relative;
+}
+
+.panel__head .links--inline li strong {
+    color: #555555;
+}
+
+.panel__head .links--inline li:after {
+    content: "|";
+    margin-#{$start-direction}: 5px;
+}
+
+.panel__head .links--inline li:last-child:after {
+    content: normal;
+}

@@ -1,0 +1,62 @@
+.top-brand-list {
+    margin-top: 1rem;
+    ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align:flex-start;
+        -ms-flex-align:flex-start;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        @include media-breakpoint-down(md) {
+            & {
+                justify-content: flex-start;
+            }
+        }
+    }
+    .brands-img {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 1rem;
+        &:before {
+            content: "";
+            background: #eef3f5 url(../images/retina/image.svg) no-repeat center;
+            background-size: 3rem;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+    .brands-logo {
+        width: 160px;
+        height: 90px;
+        overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        justify-items: center;
+        padding: 0 0.5rem;
+        margin: 0 1rem;
+        background-color: #fff;
+        box-shadow: 0 0.25rem 0.25rem rgba(17, 17, 17, 0.03);
+        border-radius: $radius2;
+        img {
+            margin: auto;
+            &[data-ratio="16:9"] {
+                max-width: 120px;
+            }
+            &[data-ratio="1:1"] {
+                max-width: 60px;
+            }
+        }
+    }
+}

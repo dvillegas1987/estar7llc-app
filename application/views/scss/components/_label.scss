@@ -1,0 +1,38 @@
+.label {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 4px 8px;
+    text-align: center;
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: $radius4;
+    &.label-default {
+        background: #fff;
+        border: $border;
+    }
+    &.label-primary {
+        background: $brand-color;
+        color: $brand-color-inverse;
+    }
+    &.label-secondary {
+        background: $secondary-color;
+        color: $secondary-color-inverse;
+    }
+    &.label-success {
+        background: lighten($success-color, 50);
+        color: $success-color;
+    }
+    &.label-info {
+        background: lighten($info-color, 30);
+        color: $info-color;
+    }
+    &.label-danger {
+        background: lighten($danger-color, 30);
+        color: $danger-color;
+    }
+    &.label-warning {
+        background: lighten($warning-color, 35);
+        color: $warning-color;
+    }
+}

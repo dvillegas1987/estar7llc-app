@@ -1,0 +1,76 @@
+.testimonials-item {
+    display: block;
+    position: relative;
+    height: 100%;
+    border-radius: $radius4;
+    -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+    background-color: $bg-white;
+    .user {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        position: absolute;
+        top: -10px;
+        #{$start-direction}: 25px;
+        z-index: 3;
+        -webkit-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        border-radius: $radius4;
+        overflow: hidden;
+        -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+        img {
+            max-width: 100%;
+        }
+    }
+    .testimonials-content {
+        overflow: hidden;
+        position: relative;
+        .user-name {
+            display: block;
+            font-weight: 400;
+            font-size: 1rem;
+            color: #3B566E;
+            margin-top: 20px;
+            padding-#{$start-direction}: 100px;
+            letter-spacing: 0.69px;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 3;
+        }
+        span {
+            display: block;
+            font-weight: 400;
+            font-size: 14px;
+            color: #6F8BA4;
+            letter-spacing: 0.6px;
+            padding-#{$start-direction}: 100px;
+            padding-#{$end-direction}: 25px;
+            position: relative;
+            z-index: 3;
+        }
+        .txt {
+            position: relative;
+            overflow: hidden;
+            p {
+                padding-#{$start-direction}: 25px;
+                padding-#{$end-direction}: 25px;
+                margin-bottom: 25px;
+                margin-top: 1rem;
+                font-weight: 400;
+                font-size: 0.85rem;
+                letter-spacing: 0.6px;
+                line-height: 26px;
+                position: relative;
+                z-index: 3;
+                max-height: 250px;
+            }
+        }
+    }
+    &:hover {
+        .user {
+            top: -20px;
+        }
+    }
+}

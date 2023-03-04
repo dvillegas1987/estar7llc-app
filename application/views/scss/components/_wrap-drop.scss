@@ -1,0 +1,119 @@
+.wrap-drop {
+    position: relative;
+    border: $border;
+    height: 38px;
+    line-height: 38px;
+    width: 100%;
+    color: $body-color;
+    font-family: inherit;
+    font-size: 0.9em;
+    font-weight: normal;
+    border-radius: $radius4;
+    cursor: pointer;
+    padding-#{$start-direction}: 10px;
+    padding-#{$end-direction}: 35px;
+    background: #fff;
+    span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    &:before,
+    &:after {
+        top: 50%;
+        position: absolute;
+        width: 9px;
+        height: 2px;
+        background-color: #545454;
+        display: inline-block;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        content: "";
+    }
+    &:after {
+        right: 10px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    &:before {
+        right: 16px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    &.wrap-drop--first {
+        border-color: $brand-color;
+        color: $brand-color;
+        &:after,
+        &:before {
+            background-color: $brand-color;
+        }
+    }
+    .drop {
+        background: #fff;
+        border: $border;
+        position: absolute;
+        -webkit-transition: all 300ms;
+        transition: all 300ms;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        position: absolute;
+        opacity: 0;
+        top: 100%;
+        z-index: 2;
+        border-radius: $radius4;
+        li {
+            &:hover {
+                a {
+                    color: $brand-color;
+                }
+            }
+            a {
+                cursor: pointer;
+                color: $body-color;
+                display: block;
+                overflow: hidden;
+                position: relative;
+                text-align: #{$start-direction};
+                font-size: 0.875em;
+                font-weight: 400;
+                padding: 10px;
+                line-height: 1.2;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                text-decoration: none;
+                -webkit-transition: all 0.2s linear;
+                transition: all 0.2s linear;
+            }
+        }
+    }
+    &.active {
+        &:after {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            border-width: 0 10px 10px;
+        }
+        &:before {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        .drop {
+            display: block;
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+    .colors {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-#{$end-direction}: 5px;
+        -webkit-box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.30);
+        box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.30);
+    }
+}

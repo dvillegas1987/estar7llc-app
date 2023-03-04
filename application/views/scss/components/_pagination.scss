@@ -1,0 +1,90 @@
+.pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: $bg-white;
+    border-radius: $radius4;
+    overflow: hidden;
+    margin: 1rem 0;
+    &.pagination--center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%;
+    }
+    &.pagination--right {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    li {
+        a {
+            width: 40px;
+            line-height: 38px;
+            text-align: center;
+            height: 38px;
+            display: block;
+            font-size: 0.8rem;
+            color: $body-color;
+            border: none;
+            border: $border;
+            border-radius: $radius4;
+            position: relative;
+            overflow: hidden;
+            margin: 0 3px;
+            &:hover {
+                background: $brand-color;
+                color: $brand-color-inverse;
+                border-color: $brand-color;
+            }
+        }
+        &.selected {
+            a {
+                border-color: $brand-color;
+                background: $brand-color;
+                color: $brand-color-inverse;
+            }
+        }
+        &.disabled {
+            opacity: 0.4;
+            a {
+                cursor: not-allowed;
+            }
+        }
+        &.prev {
+            a {
+                &:before {
+                    width: 12px;
+                    height: 12px;
+                    border-#{$start-direction}: 2px solid #333;
+                    border-bottom: 2px solid #333;
+                    position: absolute;
+                    #{$start-direction}: calc(50% - 3px);
+                    top: calc(50% - 6px);
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        &.next {
+            a {
+                &:before {
+                    width: 12px;
+                    height: 12px;
+                    border-#{$end-direction}: 2px solid #333;
+                    border-top: 2px solid #333;
+                    position: absolute;
+                    #{$start-direction}: calc(50% - 8px);
+                    top: calc(50% - 6px);
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+    [dir="rtl"] & {
+        i {
+            transform: rotate(180deg);
+        }
+    }
+}

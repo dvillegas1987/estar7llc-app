@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800|Poppins:300,400,400i,500,600,700,800');
+//font-family
+$family-primary: 'Poppins',
+sans-serif;
+$family-secondary: 'Open Sans',
+sans-serif;
+//default colors
+$blue:var(--brand-color);
+$primary:#ff3a59;
+//dynamic theme colors
+$brand-color: var(--brand-color);
+$brand-color-inverse:var(--brand-color-inverse);
+$primary-color: var(--primary-color);
+$primary-color-inverse: var(--primary-color-inverse);
+$secondary-color: var(--secondary-color);
+$secondary-color-inverse: var(--secondary-color-inverse);
+$third-color: var(--third-color);
+$third-color-inverse:var(--third-color-inverse);
+//fixed theme colors
+$body-color: #2e384d;
+$txt-gray:#8798ad;
+//border colors
+$border-color:#dee2e6;
+$border: solid 1px $border-color;
+$border-light: solid 1px lighten($border-color,
+5);
+$border-transparent: solid 1px transparent;
+//backgrounds colors
+$bg-white: #fff;
+$bg-white-inverse:$body-color;
+$gray-light: #f3f4f5;
+$bg-gray: #f3f4f5;
+//radius
+$radius4:4px;
+$radius3:3px;
+$radius2:2px;
+$radius1:1px;
+//messages
+$success-color: #1dc9b7;
+$warning-color: #ffb822;
+$info-color: #5578eb;
+$danger-color: #fd397a;

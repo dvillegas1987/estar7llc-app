@@ -1,0 +1,305 @@
+.ftshops {
+    color: #fff;
+    a {
+        color: inherit;
+    }
+    .ftshops_item {
+        background: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        @include media-breakpoint-down(sm) {
+            & {
+                flex-direction: column;
+            }
+        }
+    }
+    .shop-detail-side {
+        text-align: center;
+        background: #373737;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        max-width: 350px;
+        border-radius: $radius4;
+        position: relative;
+        overflow: hidden;
+        @include media-breakpoint-down(lg) {
+            & {
+                max-width: 260px;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            & {
+                max-width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+        &:after {
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+            width: 0;
+            height: 12.5rem;
+            border: 180px solid $secondary-color;
+            border-top: 0 solid;
+            border-bottom: 35px solid rgba(0, 0, 0, 0);
+            color: rgba(0, 0, 0, 1);
+            text-overflow: clip;
+            position: absolute;
+            top: 0;
+            content: "";
+        }
+        .products__rating {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+        .shop-detail-inner {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .product-wrapper {
+        margin-#{$start-direction}: 1rem;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        border-radius: $radius4;
+        @include media-breakpoint-down(md) {
+            & {
+                overflow-x: auto;
+                >.row {
+                    flex-wrap: nowrap;
+                    >.col {
+                        -ms-flex: 0 0 280px;
+                        -webkit-box-flex: 0;
+                        flex: 0 0 280px;
+                        max-width: 280px;
+                    }
+                }
+            }
+        }
+        .products {
+            height: 100%;
+        }
+    }
+    .ftshops_item_head {
+        border-bottom: $border;
+    }
+    .ftshops_logo {
+        background: #fff;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 142px;
+        height: 142px;
+        margin: 20px auto;
+        position: relative;
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.11);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.11);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .ftshops_detail {
+        font-size: 1em
+    }
+    .ftshops_item_head_right {
+        margin: 15px auto;
+        text-align: center;
+        color: #fff;
+    }
+    .ftshops_name {
+        font-size: 1.15em;
+        font-weight: 600;
+    }
+    .ftshops_location {
+        color: lighten($body-color, 50%);
+        font-size: 0.9em;
+    }
+    .ftshops_body {
+        background: #fff;
+        .products {
+            float: left;
+            width: 50%;
+            padding: 20px;
+            border-#{$end-direction}: $border;
+            &:last-child {
+                border-#{$end-direction}: none;
+            }
+        }
+    }
+    &.ftshops-rtl {
+        .shop-detail-side {
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2;
+            &:after {
+                border-left-color: $brand-color;
+                border-right-color: $brand-color;
+            }
+            @include media-breakpoint-down(sm) {
+                & {
+                    order: inherit;
+                }
+            }
+        }
+        .product-wrapper {
+            margin-#{$start-direction}: 0;
+            margin-#{$end-direction}: 1rem;
+        }
+    }
+}
+
+.ft-pro-wrapper {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(5, 1fr);
+    /*border: $border;*/
+    border-radius: $radius4;
+    background-color: $border-color;
+    color: #fff;
+    min-height: auto;
+    @include media-breakpoint-down(sm) {
+        & {
+            -ms-grid-columns: 50% 1px 50%;
+            grid-template-columns: 50% 50%;
+            grid-gap: 1px;
+            border: none;
+            background-color: none;
+        }
+    }
+    .products {
+        height: 100%;
+        border-radius: 0;
+        border: none;
+        .content-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            #{$start-direction}: 0;
+            top: 0;
+            bottom: 0;
+            #{$end-direction}: 0;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+            z-index: 1;
+            pointer-events: none;
+        }
+        &:hover {
+            .content-overlay {
+                opacity: 1;
+            }
+            .content-details {
+                top: 50%;
+                #{$start-direction}: 50%;
+                opacity: 1;
+            }
+        }
+    }
+    .ft-pro {
+        position: relative;
+        background-color: #fff;
+        .tag--soldout {
+            top: auto;
+            bottom: 20px;
+        }
+        &.ft-pro-1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            @include media-breakpoint-down(sm) {
+                & {
+                    -ms-grid-column-span: 3;
+                    grid-column-end: 3;
+                    -ms-grid-row-span: 2;
+                    grid-row-end: 2;
+                }
+            }
+            .products {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.ft-products {
+    display: grid;
+    //grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    @include media-breakpoint-down(sm) {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    .products--layout {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        height: 100%;
+        .products__body {
+            position: relative;
+            width: 150px;
+        }
+        .products__img {
+            margin: 0;
+        }
+        .products__footer {
+            padding: 20px;
+            width: calc(100% - 150px);
+            text-align: #{$start-direction};
+            .products__title {
+                -webkit-padding-start: 0;
+                -moz-padding-start: 0;
+                padding-#{$start-direction}: 0;
+            }
+        }
+    }
+}
+
+.content-details {
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    -webkit-padding-start: 1em;
+    -moz-padding-start: 1em;
+    padding-#{$start-direction}: 1em;
+    -webkit-padding-end: 1em;
+    -moz-padding-end: 1em;
+    padding-#{$end-direction}: 1em;
+    width: 100%;
+    top: 80%;
+    #{$start-direction}: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}

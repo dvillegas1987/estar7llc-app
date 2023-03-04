@@ -1,0 +1,10 @@
+.filters-left {
+    display: flex;
+    flex-wrap: wrap;
+    .collection-sidebar {
+        margin-#{$end-direction}: 2rem;
+    }
+    .selected-filters {
+        margin-bottom: 1.5rem;
+    }
+}

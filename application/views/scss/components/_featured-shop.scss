@@ -1,0 +1,89 @@
+.featured {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    @include media-breakpoint-down(sm) {
+        & {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .featured-item {
+        text-align: center;
+        background: $gray-light;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: $radius4;
+        position: relative;
+        overflow: hidden;
+        border: solid 1px transparent;
+        height: 100%;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+        -webkit-animation: slideRight 600ms ease both;
+        animation: slideRight 600ms ease both;
+        border: solid 1px transparent;
+        padding: 2rem 0;
+        &:hover {
+            background: none;
+            border-color: $brand-color;
+        }
+        &__body {
+            flex: 1;
+        }
+        &__foot {
+            text-align: center;
+            .products__rating {
+                justify-content: center;
+            }
+        }
+        .featured_logo {
+            background: #fff;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 142px;
+            height: 142px;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            position: relative;
+            border: $border;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            padding: 1rem;
+            @include media-breakpoint-down(sm) {
+                & {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+        .featured_detail {
+            position: relative;
+            z-index: 1;
+            min-height: 60px;
+            .featured_name a {
+                font-size: 1em;
+                color: $body-color;
+            }
+        }
+        .featured_location {
+            font-size: 0.875rem;
+            color: lighten($body-color, 50%);
+        }
+    }
+}

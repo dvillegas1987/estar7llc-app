@@ -1,0 +1,92 @@
+.media-more {
+    transition: all 0.5s ease-out;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    li {
+        padding: 0;
+        opacity: 0;
+        transition: all .1s ease-in-out;
+        margin-#{$start-direction}: -10px;
+        &:first-child {
+            margin-#{$start-direction}: 0;
+        }
+        &:nth-child(1) {
+            -webkit-transition-delay: 75ms;
+            transition-delay: 75ms;
+        }
+        &:nth-child(2) {
+            -webkit-transition-delay: .15s;
+            transition-delay: .15s;
+        }
+        &:nth-child(3) {
+            -webkit-transition-delay: .30s;
+            transition-delay: .30s;
+        }
+        &:nth-child(4) {
+            -webkit-transition-delay: .45s;
+            transition-delay: .45s;
+        }
+        &:nth-child(5) {
+            -webkit-transition-delay: .60s;
+            transition-delay: .60s;
+        }
+        &:nth-child(6) {
+            -webkit-transition-delay: .75s;
+            transition-delay: .75s;
+        }
+        &:nth-child(7) {
+            -webkit-transition-delay: .90s;
+            transition-delay: .90s;
+        }
+        &:nth-child(8) {
+            -webkit-transition-delay: .105s;
+            transition-delay: .105s;
+        }
+        &:nth-child(9) {
+            -webkit-transition-delay: .130s;
+            transition-delay: .130s;
+        }
+        .circle {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 1px var(--bg-white);
+            overflow: hidden;
+            border-radius: 50%;
+            padding: 0;
+            box-shadow: 0 0 6px rgba(154, 154, 154, 0.3);
+            background: var(--gray-color);
+            img {
+                display: block;
+            }
+            svg {
+                max-width: 16px;
+                height: 16px;
+                width: 100%;
+                fill: $body-color;
+            }
+            &.plus-more {
+                text-align: center;
+                font-size: 0.75rem;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 1;
+                cursor: pointer;
+            }
+        }
+        &:hover {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    &.show {
+        li {
+            opacity: 1;
+        }
+    }
+}

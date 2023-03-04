@@ -1,0 +1,42 @@
+To Run Test Case Follow Below Steps:
+
+1. Verify phpunit installed.
+2. If not install it by follwing guideline mentioned in this site. https://phpunit.readthedocs.io/en/9.2/installation.html#composer
+   a. "composer require --dev phpunit/phpunit ^9.5"
+   b. If already installed then update. If getting error then uninstall then reinstall. "composer remove phpunit/phpunit" OR "composer remove --dev phpunit/phpunit"
+3. While updating composer if your php version displayed wrong then just run.
+   a. "composer config platform.php <CURRENT PHP VERSION>"
+4. On  your root direcotory open terminal (Git Bash, CMD)
+5. Run ./vendor/bin/phpunit --bootstrap ./<DIR>/bootstrap.php ./<DIR>/<FILE WITH EXTENSION>
+   a. bootstrap.php having all configuration related constants and other settings. It will load this file before run test.
+   b. ./vendor/bin/phpunit --filter <ANY FUNCTION NAME> --bootstrap ./<DIR>/bootstrap.php ./<DIR>/<FILE WITH EXTENSION> this is used to run function individually.
+
+Development Notes: 
+
+=> Use @test [In doc comments] instead of test prefix in function name.
+   Example :
+   /**
+     * @test
+     *
+     * @dataProvider feedGetRates     
+     */
+    public function getRates($toCurrencies){}
+    
+=> For dataProvider user feed prefix in function name.
+   Example :
+   /**
+     * feedGetRates
+     *
+     * @return array
+     */
+    public function feedGetRates(){}
+
+=> $this->expectedReturnType(<TYPE>) used if calling function return type defined.
+   Example : $this->expectedReturnType(static::TYPE_ARRAY);
+
+
+Execute Unit test cases :
+
+1) ./vendor/bin/phpunit --bootstrap ./testcases/bootstrap.php ./testcases/plugins/FixerCurrencyConverterTest.php
+2) ./vendor/bin/phpunit --bootstrap ./testcases/bootstrap.php ./testcases/models/ShopTest.php
+3) ./vendor/bin/phpunit --bootstrap ./testcases/bootstrap.php ./testcases/models/. [Will execute all test files inside models]

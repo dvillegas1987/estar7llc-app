@@ -1,0 +1,53 @@
+.flat-ui {
+    text-align: center;
+    margin: 120px auto;
+}
+
+.flat-ui img {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.flat-ui h1 {
+    font-size: 4em;
+    font-weight: 600;
+    color: #000;
+    line-height: 1;
+}
+
+.flat-ui h1 span {
+    line-height: 1;
+    display: block;
+    font-size: 1rem;
+}
+
+.block--empty {
+    padding: 2rem 20px;
+    margin: auto;
+    .block__img {
+        display: block;
+        margin: 20px auto 30px !important;
+        /* opacity: 0.4;*/
+    }
+    .error__img {
+        width: 449px;
+        display: block;
+        margin: 20px auto 0;
+    }
+    &-sm {}
+    h3 {
+        font-size: 1.2rem;
+    }
+    h6 {
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: $txt-gray;
+    }
+}
+
+.no-product {
+    text-align: center;
+    ul {
+        justify-content: center;
+    }
+}

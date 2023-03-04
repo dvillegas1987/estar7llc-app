@@ -1,0 +1,120 @@
+#.*
+#!/.gitignore
+/robots.txt
+/public/robots.txt
+/public/health.html
+/health.html
+/.htaccess
+/public/.htaccess
+/user-uploads/*
+/admin-application/views/innovas
+/application/views/innovas
+/application/controllers/DummyController.php
+/conf
+/index.php
+/library/core
+/public/cache/*
+/public/settings.php
+/public/sitemap.xml
+/public/restore.php
+/library/license.txt
+/license.txt
+/mbs-errors.log
+/restore
+/bkup
+/application/views/.sass-cache
+/testcases/bootstrap.php
+/error_log
+/application/views/designer/*
+/public/application_top.php
+/node_modules
+/public/apple-app-site-association
+package-lock.json
+/.well-known
+.history/
+
+# zip files
+/*.zip
+/*.rar
+/*.tar
+/*.gz
+
+# Composer
+/vendor
+composer.lock
+
+# phpenv local config
+.php-version
+
+# IDE Files
+/nbproject/
+.idea/*
+
+# Netbeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+
+# Visual Studio Code
+.vscode/
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Operating Specific Junk Files
+#-------------------------
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# OS X Thumbnails
+._*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Linux
+*~
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+php_errors.log
+
+.php_cs.cache
+
+# Php Unit Test
+.phpunit.result.cache
+/testcases/bootstrap.php
+
+#css
+
+/application/views/css/main-ltr.css.map
+/application/views/css/main-rtl.css.map
+/.php-cs-fixer.cache

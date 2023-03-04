@@ -1,0 +1,160 @@
+.media>li {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    padding: 15px 0;
+    border-top: $border;
+}
+
+.media>li:first-child {
+    border-top: none;
+}
+
+.media>li .avtar {
+    width: 50px;
+    height: 50px;
+}
+
+.media>li .grid {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 20px 0 0;
+}
+
+.media>li .grid--second {
+    padding-top: 10px;
+    width: 20%;
+}
+
+.media>li .grid--third {
+    width: 64%;
+    padding-top: 4px;
+}
+
+.media>li .grid--fourth {
+    -webkit-padding-end: 0;
+    -moz-padding-end: 0;
+    padding-#{$end-direction}: 0;
+    float: right;
+}
+
+.media>li.is-read .media__title {
+    font-weight: normal;
+    color: #666;
+}
+
+.media>li.is-read .media__description {
+    color: #666;
+}
+
+.media>li a {
+    color: inherit;
+}
+
+.media__date {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    line-height: 1;
+}
+
+.media__title {
+    font-weight: 700;
+    display: block;
+    margin: 2px 0 5px 0;
+}
+
+.media .media__description {
+    opacity: 0.6;
+}
+
+.media--small .media__description {
+    font-size: 0.9em;
+    line-height: 1.3;
+}
+
+.media--small>li {
+    -webkit-padding-start: 65px;
+    -moz-padding-start: 65px;
+    padding-#{$start-direction}: 65px;
+    /* &:first-child{padding-top: 0;}*/
+}
+
+.media--small>li .grid {
+    padding: 0;
+}
+
+.media--small>li .grid--first {
+    position: absolute;
+    #{$start-direction}: 0;
+}
+
+.media--small>li .grid--second {
+    padding-top: 0;
+    width: auto;
+}
+
+.media--small>li .grid--third {
+    width: auto;
+    display: block;
+}
+
+.media--details>li:first-child {
+    border-top: $border;
+}
+
+.media--details>li:last-child {
+    padding-bottom: 0;
+}
+
+.media--details>li .grid--first {
+    padding: 5px 20px 0 0;
+}
+
+.media--details>li .grid--third {
+    width: 100%;
+    padding: 0 0 0 74px;
+}
+
+.inline-images {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        padding: 1rem;
+        border: $border;
+        border-radius: $radius4;
+        position: relative;
+        font-size: 0.8rem;
+        position: relative;
+        color: $body-color;
+        margin-#{$end-direction}: 0.5rem;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-#{$end-direction}: 0;
+        }
+        img {
+            display: block;
+            margin: auto;
+        }
+        .deleteLink {
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            #{$end-direction}: 10px;
+            color: inherit;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                background: $body-color;
+                color: #fff;
+            }
+        }
+        p {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.location-popup-width {
+    max-width: 630px;
+    padding: 0 !important;
+}
+
+.location-permission {
+    text-align: center;
+    background-image: url(images/retina/city-location.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    font-family: $family-primary;
+    &_head {
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 0 3rem;
+        h5 {
+            font-weight: 500;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        p {
+            font-size: 0.89rem;
+            margin-bottom: 2rem;
+            color: $txt-gray;
+        }
+    }
+    &_body {
+        .default {
+            border: $border;
+            border-radius: $radius4;
+            padding: 1rem;
+            padding-#{$end-direction}: 3rem;
+            display: inline-flex;
+            align-items: center;
+            color: $txt-gray;
+            margin: 0 1rem;
+            position: relative;
+            min-width: 300px;
+            font-weight: 300;
+            &:after {
+                position: absolute;
+                #{$end-direction}: 1.2rem;
+                top: calc(50% - 5px);
+                content: "";
+                display: block;
+                margin: 0;
+                width: 10px;
+                height: 10px;
+                border-top: 2px solid $brand-color;
+                border-right: 2px solid $brand-color;
+                transform: rotate(45deg);
+                [dir="rtl"] & {
+                    transform: rotate(-135deg);
+                }
+            }
+            .icn {
+                max-width: 30px;
+                margin-#{$end-direction}: 1rem;
+            }
+            .location-name {
+                font-size: 0.85rem;
+                strong {
+                    font-weight: 600;
+                    color: $body-color;
+                }
+            }
+            &:hover {
+                border-color: $brand-color;
+            }
+        }
+        .or {
+            max-width: none;
+            margin: 1.5rem auto;
+            font-weight: 400;
+            &:after,
+            &:before {
+                width: 45%;
+                background: $border-color;
+            }
+        }
+        .location-search {
+            max-width: 300px;
+            margin: 0 auto;
+            input {
+                font-size: 0.8rem;
+                background-image: url(images/retina/magni-gray.svg);
+                background-repeat: no-repeat;
+                background-position: 15px center;
+                background-size: 20px;
+                padding: 1.5rem;
+                padding-#{$start-direction}: 45px;
+                [dir="rtl"] & {
+                    background-position: calc(100% - 10px) center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+$validArea: 20px;
+$menuBarWidth: 19px;
+$menuBarHeight: 2px;
+$menuBarGap: 6px;
+.c-hamburger {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-#{$start-direction}: 10px;
+    width: $validArea;
+    height: $validArea;
+    &.is-active {
+        .c-hamburger__line {
+            &--top {
+                transform: translateY(0px) rotate(45deg);
+            }
+            &--middle {
+                transform: translateX( $menuBarWidth / 3);
+                opacity: 0;
+            }
+            &--bottom {
+                transform: translateY(0px) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.c-hamburger__line {
+    position: absolute;
+    display: block;
+    width: $menuBarWidth;
+    height: $menuBarHeight;
+    top: ( $validArea - $menuBarHeight) / 2;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: currentColor;
+    transition: .2s ease-out;
+    border-radius: $radius2;
+    &--top {
+        transform: translateY(-$menuBarGap);
+    }
+    &--middle {}
+    &--bottom {
+        transform: translateY($menuBarGap);
+    }
+}

@@ -1,0 +1,48 @@
+.no-data-found {
+    margin: 2rem auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    .img {
+        max-width: 100%;
+        margin: 1rem auto;
+        img,
+        .svg {
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+    .data {
+        margin-top: 1rem;
+        h2 {
+            font-size: 1.8rem;
+            margin: 0;
+            font-weight: 400;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: $txt-gray;
+            font-size: 0.85rem;
+        }
+    }
+    &.no-data-found--md {
+        .img {
+            max-width: 150px;
+        }
+        .data {
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &.no-data-found--sm {
+        .img {
+            max-width: 100px;
+        }
+        .data {
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

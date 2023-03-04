@@ -1,0 +1,42 @@
+/*cookies*/
+
+.cc-window {
+    background-color: rgba(0, 0, 0, 0.75);
+    bottom: 0;
+    #{$start-direction}: 0;
+    opacity: 1;
+    position: fixed;
+    #{$end-direction}: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    z-index: 999;
+}
+
+.cc-window .box-cookies {
+    color: #dbe0df;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 15px;
+    text-align: center;
+}
+
+.cc-window .box-cookies a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.cc-window .cc-close {
+    background-color: $brand-color;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    margin-#{$start-direction}: 10px;
+    padding: 0 10px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    border-radius: $radius4;
+}

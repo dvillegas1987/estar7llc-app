@@ -1,0 +1,43 @@
+{
+  "name": "growcer",
+  "version": "2.0.0",
+  "description": "Grocery Shopping System",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AblySoft268/V2-Growcer.git"
+  },
+  "keywords": [
+    "growcer"
+  ],
+  "author": "FATbit",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-purgecss": "^2.3.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-watch": "^5.0.1",
+    "node-sass": "^4.13.1",
+    "simplebar": "^5.2.1"
+  },
+  "browserslist": [
+    "last 10 versions"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "bugs": {
+    "url": "https://github.com/AblySoft268/V2-Growcer/issues"
+  },
+  "homepage": "https://github.com/AblySoft268/V2-Growcer#readme"
+}
